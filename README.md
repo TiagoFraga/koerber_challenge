@@ -169,11 +169,16 @@ Therefore, after some tests it was found that the three files are consumed with 
 
 * Zones (13K) = <1s
 * Green Cabs (30Mb / 47K rows) = ~50s
-* Yellow Cabs (90Mb / ~1.5M rows) = ~3m
+* Yellow Cabs (40Mb / ~500K rows) = ~1m
 
 These are the values ​​obtained due to the need to keep the database valid, and the need to verify that a zone exists before entering a trip data. In this way we maintain the relationship between trips and zones and ensure that there is no trip whose zone is not present in the database.
 
 The performance values ​​could be improved if the FKs of the trip table were not taken into account, and the values ​​were inserted automatically without the validation of the FK.
+
+Other tests were take in consideration and the results were: 
+
+* Yellow Cabs (90Mb / ~1.5M rows) = ~3m
+* Yellow Cabs (350Mb / ~4M rows) = ~10m
 
 ## Update the Data files
 
