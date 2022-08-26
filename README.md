@@ -19,8 +19,8 @@ Welcome to the Koerber Backend Challenge developed by Tiago Fraga.
 ### Step 1 - Build Docker Images
 
 ```
-$ cd backend 
-$ docker build backend:1.0
+$ cd koerber_challenge/backend 
+$ docker build -t backend:1.0 .
 ```
 
 ### Step 2 - Start Docker Container
